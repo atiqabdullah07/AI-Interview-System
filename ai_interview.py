@@ -1,16 +1,11 @@
 from typing import Dict, TypedDict, Optional
 from langchain_community.llms import ollama
 from langgraph.graph import StateGraph, END
-import openai
+
 
 import re 
 llm = ollama.Ollama(model="llama2")
-# token = 'sk-proj-Pvv6qQe90jAXgT6WYBKpT3BlbkFJU0qahQCwe0Y4v3gMQP9G'
 
-# llm = openai.completions.create(
-#     model="gpt-4"
-#     max_tokens=2048
-# )
 
 class GraphState(TypedDict):
     history: Optional[str] = None
